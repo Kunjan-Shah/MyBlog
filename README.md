@@ -5,7 +5,7 @@ CRUD Blog application in SpringBoot
 
 ## Functionalities
  - Add a new blog
-  - The user can click on "Add a Blog" button on landing page and then create a new blog.
+  * The user can click on "Add a Blog" button on landing page and then create a new blog.
   ```
   $ curl localhost:8080/addblog
   ```
