@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>MyBlog</title>
+	</head>
+	<body>
+		<h1>Welcome to MyBlog</h1>
+		<p style="color:red" th:text="${message}"></p>
+		Choose action:<br>
+		<ul>
+			<li><a href="/addblog">Add a Blog</a></li>
+			<li><a href="/getallblogs">Get all the blogs</a></li>
+		</ul>
+	</body>
+</html>

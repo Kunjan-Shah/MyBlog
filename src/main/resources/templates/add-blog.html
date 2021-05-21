@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>MyBlog</title>
+	</head>
+	<body>
+		<h3>Add blog details</h3>
+		<form action="#" th:action="@{/addblog}" th:object="${blog}" method="post">
+		    <label for="name">Content</label>
+		    <input type="text" th:field="*{content}" id="content" placeholder="Blog Content">
+		    <input type="submit" value="Add Blog">   
+		</form>
+	</body>
+</html>
