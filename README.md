@@ -29,3 +29,5 @@ CRUD Blog application in SpringBoot
   ```
   $ curl localhost:8080/update/{id}
   ```
+
+### Note: The @DeleteMapping and @PutMapping need to be uncommented in order to run Postman or Curl DELETE or PUT requests. By default, they use @PostMapping. Since, I did not have any prior experience of working with SpringBoot, I learnt it from scratch and implemented it in the application as precisely as I can. I got stuck on the level 2 and could not debug it before the deadline. However, I learnt a lot along the way!
