@@ -5,8 +5,9 @@
 		<title>MyBlog</title>
 	</head>
 	<body>
-		<h1>Blog Heading</h1>
+		<h1 th:text="${blog.title}"></h1>
 		<p th:text="${blog.content}"></p>
-		
+		<br>
+		<a th:href="@{/}">Return to homepage</a>
 	</body>
 </html>

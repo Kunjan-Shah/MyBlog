@@ -7,9 +7,16 @@
 	<body>
 		<h3>Add blog details</h3>
 		<form action="#" th:action="@{/addblog}" th:object="${blog}" method="post">
-		    <label for="name">Content</label>
-		    <input type="text" th:field="*{content}" id="content" placeholder="Blog Content">
+		    <label for="name">Title</label>
+		    <div>
+		    	<input type="text" th:field="*{title}" id="title" placeholder="Blog Title">
+		    </div>
+		    <div style="margin: 25px 0px">
+		    	<textarea th:field="*{content}" id="content" rows="8" cols="50" placeholder="Blog Content"></textarea>
+		    </div>
 		    <input type="submit" value="Add Blog">   
 		</form>
+		<br>
+		<a th:href="@{/}">Return to homepage</a>
 	</body>
 </html>

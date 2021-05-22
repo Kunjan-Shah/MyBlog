@@ -1,5 +1,7 @@
 package blogcrud.blog.controller;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,6 +40,8 @@ public class BlogController {
 		if(result.hasErrors()) {
 			return "add-blog";
 		}
+		blog.setCreationDate(new Date());
+		blog.setUpdateDate(new Date());
 		blogRepository.save(blog);
 		model.addAttribute("message", "You added a blog");
 		return "index";
@@ -78,6 +82,9 @@ public class BlogController {
 	    	model.addAttribute("message", "An error occured");
 			return "index";
 	    }
+	    Blog oldBlog = blogRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid blog Id:" + id));
+	    blog.setCreationDate(oldBlog.getCreationDate());
+	    blog.setUpdateDate(new Date());
 	    blogRepository.save(blog);
 	    model.addAttribute("message", "You updated a blog");
 		return "index";

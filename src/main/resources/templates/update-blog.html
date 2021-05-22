@@ -5,11 +5,18 @@
 		<title>MyBlog</title>
 	</head>
 	<body>
-		<h3>Update blog details</h3>
+		<h3>Update blog</h3>
 		<form action="#" th:action="@{/update/{id}(id=${blog.id})}" th:object="${blog}" method="post">
-		    <label for="name">Content</label>
-		    <input type="text" th:field="*{content}" id="content" placeholder="Blog Content">
+		    <label for="name">Title</label>
+		    <div>
+		    	<input type="text" th:field="*{title}" id="title">
+		    </div>
+		    <div style="margin: 25px 0px">
+		    	<textarea th:field="*{content}" id="content" rows="8" cols="50"></textarea>
+		    </div>
 		    <input type="submit" value="Update Blog">  
 		</form>
+		<br>
+		<a th:href="@{/}">Return to homepage</a>
 	</body>
 </html>
